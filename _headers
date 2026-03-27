@@ -1,6 +1,17 @@
 # Reference: https://developers.cloudflare.com/pages/platform/headers/#prevent-your-pagesdev-deployments-showing-in-search-results
-https://:project.pages.dev/*
+
+# Prevent search engines from indexing *.pages.dev deployments
+https://postoolbox.pages.dev/*
   X-Robots-Tag: noindex
-  
-https://:project.pages.dev/*
-  Access-Control-Allow-Origin: https://staging.:project.pages.dev
+
+# Allow cross-origin requests from staging
+https://postoolbox.pages.dev/*
+  Access-Control-Allow-Origin: https://staging.postoolbox.pages.dev
+
+# Add headers for production deployment
+https://www.postoolbox.com/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'
+  Cache-Control: max-age=31536000

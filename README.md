@@ -1,72 +1,73 @@
-# cloudflare-pages-template
+# POS Toolbox - Temporary Landing Page
 
-Get started with [Cloudflare Pages](https://pages.cloudflare.com/) by deploying this pretty template on your own account, and start playing around.
+This repository contains the code for a **temporary landing page** for the POS Toolbox project. The landing page is hosted on Cloudflare Pages and serves as a placeholder while the actual landing page is under development.
 
-## Step 1
+---
 
-Clone this Repository to your own GitHub account. 
+## Project Structure
 
-Or download this Repository as a ZIP file by clicking the green button that says "<> Code" and clicking "Download ZIP", then extract the contents to a new folder, and upload the content (and only the content; not the folder) of that folder to a new GitHub Repository.
+The project is organized as follows:
 
-## Step 2
+---
 
-Access your _free_ Cloudflare account ([new to Cloudflare?](https://developers.cloudflare.com/fundamentals/get-started/)), and go to the Pages tab.
+## Features
 
-![pages-tab](/img/readme-img/pages-tab.png)
+1. **Dynamic Meta Tags**:
+   - The `_middleware.js` file dynamically injects Open Graph (OG) and Twitter meta tags into the HTML response for better SEO and social media sharing.
 
-## Step 3
+2. **Customizable Headers**:
+   - The `_headers` file defines HTTP headers for security, caching, and cross-origin requests.
 
-Go to your Cloudflare Dashboard. Click on the blue "Create a project" button, and select "Connect to Git".
+3. **SEO Optimization**:
+   - The `robots.txt` file prevents search engines from indexing the staging environment.
+   - The `sitemap.xml` file provides a structured map of the website for search engines.
 
-## Step 4
+4. **Responsive Design**:
+   - The landing page is built with responsive design principles using Bootstrap.
 
-Connect your GitHub account, select your Repository, and click "Begin setup".
+---
 
-![github-deploy](/img/readme-img/github-deploy.png)
+## Deployment
 
-## Step 5
+The landing page is deployed on **Cloudflare Pages**. The following environments are configured:
 
-If you want, you can update some content, including the [index.html](index.html).
+- **Staging**: `https://postoolbox.pages.dev`
+- **Production**: `https://www.postoolbox.com`
 
-You might want to update the following files with your own parameters:
-- [robots.txt](robots.txt)
-- [sitemap.xml](sitemap.xml)
+---
 
-## Step 6
+## Development
 
-Just hit "Save and Deploy" and let the magic happen! ✨
+### Prerequisites
+- Node.js (for local development)
+- A Cloudflare Pages account
 
-![success](/img/readme-img/success.png)
+### Local Development
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/pos-toolbox-landing-page.git
 
-## Step 7
+### Key Points:
+1. **Project Overview**:
+   - Describes the purpose of the repository as a temporary landing page.
 
-Share your beautiful website with the world. 🤓
+2. **Project Structure**:
+   - Lists the files and folders in the project.
 
-==> https://cloudflare-pages-template.pages.dev/ (_your link might look different_)
+3. **Features**:
+   - Highlights the key features of the project, such as dynamic meta tags and SEO optimization.
 
-## Step 8 (Metadata)
+4. **Deployment**:
+   - Specifies the staging and production URLs.
 
-Added `Functions/_middleware.js` from the GitHub Repo [Dynamic Social Previews Meta Tags with Cloudflare Pages](https://github.com/pew/cloudflare-pages-social-preview), in order to add Meta Tags.
+5. **Development**:
+   - Provides instructions for local development.
 
-Don't forget to edit the file [_middleware.js](functions/_middleware.js) with your own title, description, and such.
+6. **File Details**:
+   - Explains the purpose of key files like `_middleware.js`, [_headers](http://_vscodecontentref_/8), [robots.txt](http://_vscodecontentref_/9), and [sitemap.xml](http://_vscodecontentref_/10).
 
-## More (Optional) Steps
+7. **To-Do**:
+   - Includes a section for future tasks, such as replacing the temporary landing page.
 
-[Add custom headers to create Content Security Policies (CSP) and more](https://developers.cloudflare.com/pages/platform/headers/)
-
-[Add a custom domain to a branch](https://developers.cloudflare.com/pages/how-to/custom-branch-aliases/).
-
-![custom-domains](/img/readme-img/custom-domains.png)
-
-[Redirecting www to domain apex](https://developers.cloudflare.com/pages/how-to/www-redirect/)
-
-[Cloudflare Pages gets even faster with Early Hints](https://blog.cloudflare.com/early-hints-on-cloudflare-pages/)
-
-[Build full-stack applications by executing code on the Cloudflare network with help from Cloudflare Workers](https://developers.cloudflare.com/pages/platform/functions/)
-
-# Disclaimer
-
-This is a general introduction to Cloudflare Pages. 
-
-Educational purposes only. This repo does not reflect the opinions of, and is not affiliated with Cloudflare. 
-Screenshots are taken from the Cloudflare dashboard.
+8. **Contact**:
+   - Provides a contact email for inquiries.

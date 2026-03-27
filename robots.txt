@@ -1,5 +1,10 @@
 # Reference: https://developers.cloudflare.com/fundamentals/get-started/reference/cdn-cgi-endpoint/#disallow-using-robotstxt
 User-agent: *
 Disallow: /cdn-cgi/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /functions/
+Disallow: /img/
+Disallow: /js/
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://www.postoolbox.com/sitemap.xml
