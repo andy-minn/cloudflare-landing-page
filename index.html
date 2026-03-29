@@ -110,9 +110,46 @@
 
 
 <!-- Additional JS -->
-<script src="./js/bootstrap.bundle.min.js?8537"></script>
-<script src="./js/blocs.min.js?4639"></script>
-<script src="./js/lazysizes.min.js" defer></script><!-- Additional JS END -->
-
+<script src="/js/bootstrap.bundle.min.js?8537"></script>
+<script src="/js/blocs.min.js?4639"></script>
+<script src="/js/lazysizes.min.js" defer></script><!-- Additional JS END -->
+<script>
+	// Fix scroll functionality for both domains
+	(function() {
+		// Fix scroll down button
+		const downLink = document.querySelector('[onclick*="scrollToTarget(\'0\'"]');
+		if (downLink) {
+			downLink.addEventListener('click', function(e) {
+				e.preventDefault();
+				const nextBloc = this.closest('.bloc').nextElementSibling;
+				if (nextBloc && nextBloc.classList.contains('bloc')) {
+					nextBloc.scrollIntoView({ behavior: 'smooth' });
+				}
+			});
+		}
+		
+		// Fix scroll to top button
+		const upButton = document.querySelector('.scrollToTop');
+		if (upButton) {
+			upButton.addEventListener('click', function(e) {
+				e.preventDefault();
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			});
+		}
+		
+		// Also fix the down button if it has the onclick attribute directly
+		const downArrow = document.querySelector('.fa-angle-down')?.closest('a');
+		if (downArrow && downArrow.getAttribute('onclick')?.includes('scrollToTarget')) {
+			downArrow.removeAttribute('onclick');
+			downArrow.addEventListener('click', function(e) {
+				e.preventDefault();
+				const nextBloc = document.querySelector('#bloc-1');
+				if (nextBloc) {
+					nextBloc.scrollIntoView({ behavior: 'smooth' });
+				}
+			});
+		}
+	})();
+	</script>
 </body>
 </html>
