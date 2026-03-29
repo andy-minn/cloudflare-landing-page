@@ -18,6 +18,11 @@
 	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
 	<!-- Stylesheets END -->
 
+	// Normalize hostname to ensure consistent behavior
+	if (window.location.hostname === 'www.postoolbox.com') {
+	  window.location.href = window.location.href.replace('www.postoolbox.com', 'postoolbox.com');
+	}
+	
 	<!-- Here HTMLRewriter will write the Metadata from _middleware.js -->
 </head>
 <body>
